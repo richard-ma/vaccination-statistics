@@ -3,6 +3,10 @@ import pandas as pd
 from datetime import datetime
 
 
+def press_any_key_to_exit(msg):
+    input(msg)
+
+
 file_name = './docs/武清区疫苗.xlsx'
 sheet_name = '武清区'
 default_engine = 'openpyxl'
@@ -122,3 +126,5 @@ outline += "目前待整改问题"+ str(counter_unfixed_problem) +"个" + "\n"
 outline += "今日未开诊"+ str(counter_ready_to_use) +"个" + "\n"
 
 print(outline)
+
+press_any_key_to_exit('按任意键退出...')
